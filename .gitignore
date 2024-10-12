@@ -1,1 +1,8 @@
+node_modules
+.vscode/*
+.env
 journey.md
+.DS_Store
+libraries.json
+journey-copy.md
+

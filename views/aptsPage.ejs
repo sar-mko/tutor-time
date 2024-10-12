@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Tutors</title>
+</head>
+<nav class="navbar bg-base-100">
+  <div class="flex-1">
+    
+    <a href="/" class="btn btn-ghost text-xl"><i class="fa-solid fa-book text-bg-300"></i>Tutor Time</a>
+    
+  </div>
+  <div class="flex-none">
+    <ul class="menu menu-horizontal px-1">
+      <li><a href="/search">Search</a></li>
+      <li>
+        <details>
+          <summary>
+            More
+          </summary>
+          <ul class="p-2 bg-base-100 rounded-t-none">
+            <li><a href="/libraries">Libraries</a></li>
+            <li><a href="/libraries/tutors">Tutors</a></li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+</nav>
+<body>
+    <h1>Your Appointments</h1>
+    <div>
+        <h3>Time</h3>
+        <h3>Day</h3>
+        <h3>Tutor</h3>
+        <a href="">Need to Cancel?</a>
+    </div>
+    <% if(appointments.length){ %>
+
+ 
+    <% appointments.forEach( el => { %>
+        <div class="group relative" data-id='<%=el.libraryId %>' >
+            <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 group-hover:opacity-75 sm:h-64">
+
+              
+            </div>
+
+            <p class="text-base font-semibold text-gray-900"><%= el.libraryId %>1</p>
+            <p class="text-base font-semibold text-gray-900"><%= el.tutorId %>1</p>
+            <p class="text-base font-semibold text-gray-900"><%= el.data %> 1</p>
+            <p class="text-base font-semibold text-gray-900"><%= el.time %> 1</p>
+
+           
+          </div>
+
+<% }) %>   
+
+<% } else{ %>  
+    <h1> You have no appointments </h1> 
+    <% }%>  
+</body>
+</html>
+            
